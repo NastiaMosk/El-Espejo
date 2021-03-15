@@ -1,0 +1,61 @@
+include pug/mixins/galleryImg.pug
+include pug/mixins/social-icons.pug
+
+<!DOCTYPE html>
+html(lang="en")
+  include pug/includes/head.pug
+  body
+    include pug/includes/header.pug
+    .cover#home
+      .cover__filter
+      .cover-text
+        h1.cover-text__title Some Name
+        h2.cover-text__subtitle photographer
+    .page-content
+      .biography.block#myStory
+        h2.secondary-heading My story
+        p.text.animation-element.slide-left.
+          Lorem Lipsum dolor sit amet consectetur
+          adipisicing elit. Dolores laboriosam
+          reprehenderit sapiente, assumenda facilis
+          quibusdam dolorum inventore nihil esse 
+          aspernatur facere minima deserunt obcaecati 
+          explicabo perferendis, eum asperiores et.
+        img(src="img/bio-small.jpg" srcset="img/bio-small.jpg 450w, img/bio-medium.jpg 700w, img/bio-big.jpg 900w" alt="My photo").biography__photo.animation-element.slide-right
+      
+      .portfolio.block#portfolio
+        span.portfolio__inst-icon
+        a(href='https://www.instagram.com/nastia_mosk/' target='_blank' rel='noopener noreferrer').portfolio__account-link--faded @nastia_mosk
+        .portfolio__gallery.gallery  
+          a.span-2.gallery__item-link.animation-element.slide-up(href='img/gallery/prairie-dog.jpg')
+            img.gallery__item-thumbnail(src='img/gallery/prairie-dog-tmb.jpg' alt='Prairie dog')
+          a.gallery__item-link.animation-element.slide-up(href='img/gallery/the-Grand-Canyon.jpg')
+            img.gallery__item-thumbnail(src='img/gallery/the-Grand-Canyon-tmb.jpg' alt='The Grand Canyon')
+          a.span-3.gallery__item-link.animation-element.slide-up(href='img/gallery/kodak-Portra-Film.jpg')
+            img.gallery__item-thumbnail(src='img/gallery/kodak-Portra-Film-tmb.jpg' alt='Kodak Portra Film')
+          a.span-2.gallery__item-link.animation-element.slide-up(href='img/gallery/good-Boy-sitting-dog.jpg')
+            img.gallery__item-thumbnail(src='img/gallery/good-Boy-sitting-dog-tmb.jpg' alt='Good Boy - sitting dog')
+          a.span-2.gallery__item-link.animation-element.slide-up(href='img/gallery/hotel-LondonHouse-Chicago.jpg')
+            img.gallery__item-thumbnail(src='img/gallery/hotel-LondonHouse-Chicago-tmb.jpg' alt='Hotel LondonHouse Chicago')
+          a.span-3.gallery__item-link.animation-element.slide-up(href='img/gallery/green-Leaf-Fern.jpg')
+            img.gallery__item-thumbnail(src='img/gallery/green-Leaf-Fern-tmb.jpg' alt='Green Leaf Fern')
+          a.gallery__item-link.animation-element.slide-up(href='img/gallery/montain-Cliff-Rock.jpg')
+            img.gallery__item-thumbnail(src='img/gallery/montain-Cliff-Rock-tmb.jpg' alt='Montain Cliff Rock')
+
+      
+      .promo.block#product
+        .promo__container
+          h2.promo__heading.secondary-heading Check out my book!
+          img(src="img/promo-photo.png", alt="My book").promo__photo
+          p.promo__legend.text Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+          p.promo__price $100.00
+          a(href="tel:+380669741770").promo__phone-num--faded +352-4857-65-98
+          a(href="mailto:thehappynastia@gmail.com" target='_blank' rel='noopener noreferrer').promo__email--faded email@mail.mail
+    include pug/includes/footer.pug
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="js/libs.min.js")
+    script(src="js/main.js")
+
+
+
+    

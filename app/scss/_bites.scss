@@ -1,0 +1,140 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat( auto-fill, minmax( 45%, 1fr ) );
+  grid-auto-rows: 30vw;
+  gap: 1vw;
+  
+  &__item-link {
+    display: inline-block;
+  }
+  &__item-thumbnail {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  } 
+  & .span-2 {
+    grid-row-end:span 2 ;
+  } 
+  & .span-3 {
+    grid-row-end:span 3 ;
+
+    &:last-child {
+      grid-row-end: span 2;
+    }
+  } 
+  & img {
+    cursor: zoom-in;
+  }
+}
+
+.animation-element {
+  opacity: 0;
+  position: relative;
+  &.slide-left {
+    opacity: 0;
+    transition: all 700ms linear;
+    transform: translate3d(-100px, 0px, 0px);
+  }
+  &.slide-right {
+    opacity: 0;
+    transition: all 500ms linear;
+    transform: translate3d(100px, 0px, 0px);
+  }
+  &.slide-up {
+    opacity: 0.5;
+    transition: all 500ms linear;
+    transform: scale(0.95);
+  }
+  &.in-view {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+  }
+}
+
+[class*="--faded"] {
+  color: $fadedCol;
+  font-style: italic;
+}
+
+.social-icons {
+  display: flex;
+  width: min-content;
+  &__item {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    color: #ffffff;
+    margin: 1em;
+    &.twitter{
+      background: url('../img/twitter.svg') no-repeat 100% 100%;
+      background-size: contain;
+    }
+    &.facebook{
+      background: url('../img/facebook.svg') no-repeat 100% 100%;
+      background-size: contain;
+    } 
+    &.instagram{
+      background: url('../img/instagram.svg') no-repeat 100% 100%;
+      background-size: contain;
+    }
+    &.youtube{
+      background: url('../img/youtube.svg') no-repeat 100% 100%;
+      background-size: contain;
+    }
+  }
+}
+.side-menu {
+  position: relative;
+  top: 0;
+  right: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 315px;
+  height: 100vh;
+  background: #fff;
+  color:#000;
+  transform: translateX(100vw);
+  transition: all 0.5s ease-out;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 315px;
+    width: 56px;
+    height: 100vh;
+    background: url('../img/ripped-paper-left.png') repeat-y  100% 100%;
+
+  }
+  & .header-content__logo {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    & a {
+      padding: 0;
+    }  
+  }
+  &__nav-menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    text-align: center;
+    & .secondary-heading {
+      font-size: 1.5rem;
+      & .nav-menu__item.current {
+        background: url(../img/menu-circle.png) no-repeat 50% 50%;
+        background-size: contain;
+      }
+    }
+
+  }
+  & .social-icons {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

@@ -1,0 +1,149 @@
+@import 'vars';
+@import 'libs';
+@import'base';
+@import 'bites';
+@import 'header';
+@import 'inst-frame';
+
+.cover {
+  position: relative;
+  background: url('../img/ripped-paper-top.png') repeat-x   left bottom, url('../img/home-cover.jpg') no-repeat fixed center/cover;
+  height: 111vh;
+  color: white;
+  & .cover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    text-align: center;
+    width: fit-content;
+    &__title {
+      font-family: $text;
+      font-size: calc(2rem + 5vw);
+      margin-bottom: 0;
+    }
+    &__subtitle {
+      font-family:$subtitle;
+      font-size: calc(1rem + 2vw);
+      letter-spacing: 0.5em;
+      padding-left: 0.5em;
+      margin-top: 0.6rem;
+    }
+  }
+  & .cover__filter {
+    position: absolute;
+    top: 64px;
+    height: 50vh;
+    width: 100%;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0%, rgba(0,0,0,0) 100%);
+  }
+}
+.biography__photo {
+    max-width: 100vw;
+    height: auto;
+    margin-top: 3rem;
+    object-fit: fill;
+}
+.portfolio {
+  padding: 3vw;
+  padding-top: 64px;
+    &__inst-icon {
+      display: block;
+      width: 3.5rem;
+      height:3.5rem;
+      background: url('../img/instagram.svg') no-repeat 100% 100%;
+      background-size: contain;
+      margin: 0 auto;
+      margin-bottom: 1.5rem;
+    }
+    &__account-link--faded {
+      margin: 1.4rem;
+      font-size: 0.9rem; 
+      text-decoration: underline;
+    }
+    &__gallery {
+      margin-top: 1.5rem;
+  }
+}
+.promo {
+  background: url('../img/ripped-paper-top.png') repeat-x left bottom, url('../img/ripped-paper.png') repeat-x left top, url('../img/home-cover.jpg') no-repeat fixed center/cover;
+  padding: 5rem 3vw 5rem 3vw;
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #fff;
+    height: max-content;
+    padding: 3vw;
+    align-items: center;
+  }
+  &__heading {
+    font-size: 1.65rem;
+    text-align: center;
+    grid-column-end: span 2;
+  }
+  &__photo{
+    max-width: 100%;
+    grid-row-end:span 2 ;
+  }
+  &__legend {
+    align-self:end;
+    font-size:  calc(1rem + 0.7vw);
+    padding: 0.5rem;
+  }
+  &__price {
+    font-family: $subtitle;
+    font-size:calc(1rem + 5vw);
+    padding:0.5rem;
+    margin: 0;
+    align-self:start;
+  }
+  &__email--faded {
+    text-align: right;
+  }
+}
+
+.footer-content {
+  padding: 3vw;
+  &__heading {
+    font-family: $text;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 0;
+    & .inst-logo-word {
+      display: inline-block;
+      width: 7rem;
+      height: 2rem;
+      font-size: 0; 
+      vertical-align: middle;
+      background: url("../img/inst-logo-word.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+  &__inst-frame {
+    box-shadow: inset 0px 0px 63px -53px black;
+  }
+  &__social-icons {
+    margin: 4% auto;
+  }
+}
+
+.Nastia_Copyright {
+  position: absolute;
+  height: 50px;
+  background: black;
+  color: #ddd;
+  width: 100%;
+  & cite {
+    font-style: normal;
+    font-size: calc(7px + .5vw);
+    display: block;
+    text-align: center;
+    line-height: 50px;
+  }
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+@import 'media';

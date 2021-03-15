@@ -1,0 +1,19 @@
+mixin galleryImg(quantity)
+  - for (var i = 1; i <= quantity; i++) 
+    - if (i % 5==0) {
+        a(href='img/gallery/'+ i +'.jpg', class='span-2').gallery__item-link.animation-element.slide-up
+          img(src='img/gallery/'+ i +'-thn.jpg', alt="").gallery__item-thumbnail
+    - } else {
+        - if (i % 3 == 0) {
+            a(href='img/gallery/'+ i +'.jpg', class='span-3').gallery__item-link.animation-element.slide-up
+              img(src='img/gallery/'+ i +'-thn.jpg', alt="").gallery__item-thumbnail
+        - } else {
+            - if (i % 2 == 0) {
+                a(href='img/gallery/'+ i +'.jpg', class='span-2').gallery__item-link.animation-element.slide-up
+                  img(src='img/gallery/'+ i +'-thn.jpg', alt="").gallery__item-thumbnail
+            - } else {
+                  a(href='img/gallery/'+ i +'.jpg').gallery__item-link.animation-element.slide-up
+                    img(src='img/gallery/'+ i +'-thn.jpg', alt="").gallery__item-thumbnail
+            - }
+        - }
+    - }

@@ -1,0 +1,30 @@
+body {
+  font-family: $text;
+}
+h1,h2 {
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+li {
+  list-style: none;
+}
+.secondary-heading {
+  font-family: $subtitle;
+  margin: 1.2rem;
+  margin-top: 1.6rem;
+  font-size: 2.2rem;
+}
+.text {
+  font-family: $text;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  margin: 0;
+}
+.block {
+  padding-top: 64px;
+  overflow: hidden;
+}

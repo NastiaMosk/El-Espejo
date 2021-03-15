@@ -1,0 +1,124 @@
+@media  (orientation:landscape) and (max-width: 830px){
+  .side-menu {
+    width:84vw;
+    &::before {
+    right: 84vw;
+    }
+    & .header-content__logo {
+      top: 15%;
+    }
+    &__nav-menu {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 66%;
+    justify-content: center;
+    }
+    & .social-icons {
+      top: 75%;
+    }
+  }
+  .cover {
+    & .cover-text {
+      transform: translate(-50%, -60%);
+    }
+  }
+  .biography {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, min-content);
+    & .biography__photo {
+      height: 100%;
+      width: auto;
+      max-width: 50vw;
+      object-fit: contain;
+      margin-top: 0;
+      grid-row: 1/span 2;
+      grid-column: 2/3;
+    }
+  }
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+    grid-auto-rows: 18%;
+    & .span-3 {
+      grid-row-end: span 2;
+    }
+  }
+  .promo__container {
+    & .promo__heading {
+      margin: 0;
+      margin-top: 1.6rem;
+    }  
+    & .promo__photo {
+      max-width: 75%;
+    }
+    & .promo__price {
+      font-size: 8vw;
+    }
+  }
+}
+
+
+
+@media  (min-width:700px) {
+  .header-content {
+    justify-content: center;
+  }
+  .biography {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, min-content);
+    & .biography__photo {
+      max-width: auto;
+      height: auto;
+      max-width: 100%;
+      margin-top: 0;
+      grid-row: 1/span 2;
+      grid-column: 2/3;
+    }
+  }
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(32%, 1fr));
+    grid-auto-rows: 18%;
+    & .span-3 {
+      grid-row-end: span 2;
+    }
+  }
+  .promo__container {
+    & .promo__heading {
+      margin: 0;
+      margin-top: 1.6rem;
+    }  
+    & .promo__photo {
+      max-width: 75%;
+    }
+    // & .promo__price {
+    //   font-size: 8vw;
+    // }
+  }
+}
+@media (min-width: 1280px) {
+  .block {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  .cover .cover-text {
+    &__title {
+      font-size: calc(3rem + 3vw);
+    }
+    &__subtitle {
+      font-size: calc(1rem + 1.5vw);
+    }
+  }
+
+  .promo {
+    &.block {
+      max-width: 100%;
+    }
+    
+    & .promo__container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+
+}

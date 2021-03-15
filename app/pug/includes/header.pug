@@ -1,0 +1,26 @@
+header.header#header
+  .header-content
+    .header-content__logo 
+      a(href="#home") EL ESPEJO
+    input(type="checkbox").header-content__toggler#burger-btn
+    .header-content__hamburger
+        label(for="burger-btn")
+
+    .side-menu 
+      .header-content__logo 
+        a(href="#home").nav-menu__item EL ESPEJO
+      nav.side-menu__nav-menu.nav-menu
+        li.secondary-heading
+          a(href="#myStory").nav-menu__item About me
+        li.secondary-heading
+          a(href="#portfolio").nav-menu__item Portfolio
+        li.secondary-heading
+          a(href="#product").nav-menu__item My book
+        li.secondary-heading
+          a(href="#footer").nav-menu__item Follow me
+
+      +social-icons(class=".side-menu__social-icons")
+        
+
+        
+        

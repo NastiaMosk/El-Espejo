@@ -1,0 +1,64 @@
+.inst-frame {
+  background: #fafafa;
+  margin: 0 auto;
+  padding: 1rem;
+  width: 350px;
+  max-width: 84vw;
+  & .inst-hd {
+    margin:1rem 0 1.5rem 0;
+    display: flex;
+    align-items:center;
+    align-content: center;
+    & .inst-ava {
+      max-width: 22%;
+      position: relative;
+      margin-right: 28px;
+      &__crl {
+        position: absolute;
+        width: 117%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &__pic {
+        max-width: 100%;
+        border-radius: 50%;
+      }
+    }
+    & .inst-section {
+      font-size: 1.5rem;
+      color: #262626;
+      &__nknm {
+        margin-bottom: 0.4rem;
+        font-weight:300;
+    }
+      & .inst-sts {
+        width: 100%;
+        padding-left: 0;
+        display: flex;
+        font-size: 0.9rem;
+        justify-content: space-between;
+        margin: 0;
+        &__itm {
+          text-align: center;
+          padding-top: 0.6rem;
+          margin-right: 2vw;
+          & span {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+  & .inst-descr {
+    font-size: 0.9rem;
+    color:#000;
+    &__nm {
+    font-weight: 600;
+    }
+    &__lnk {
+    color:#00376b;
+    font-weight: 600;
+    }
+  }
+}
